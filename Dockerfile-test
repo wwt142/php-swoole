@@ -1,0 +1,11 @@
+FROM wangwentao/php-swoole
+
+RUN mkdir /app
+
+COPY tests/app.php /app
+
+WORKDIR /app
+
+EXPOSE 9501
+
+ENTRYPOINT [ "php", "app.php" ]
